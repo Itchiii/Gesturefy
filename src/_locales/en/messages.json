@@ -182,6 +182,15 @@
     "description": "Display update notification"
   },
 
+  "settingNameDarkMode": {
+    "message": "Dark Mode",
+    "description": "Dark Mode"
+  },
+  "settingDescriptionDarkMode": {
+    "message": "Change the theme to a dark one.",
+    "description": "Change the theme to a dark one."
+  },
+
   "settingDescriptionMouseButton": {
     "message": "The mouse button which will trigger the gesture.",
     "description": "The mouse button which will trigger the gesture."

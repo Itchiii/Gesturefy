@@ -19,17 +19,18 @@
   outline: none;
   font-family: "Orkney Regular", "Arial", sans-serif;
   font-size: 16px;
-  color: #666666;
+  color: var(--color-text);
 }
 
 html, body {
   height: 100%;
-  background: #FFFFFF;
+  background: var(--color-background);
+  transition: background-color .3s;
 }
 
 a {
   cursor: pointer;
-  color: #00AAA0;
+  color: var(--color-highlighted_text);
   text-decoration: none;
 }
 
@@ -45,7 +46,7 @@ a:hover, a:focus {
   position: fixed;
   width: 100px;
   height: 100%;
-  background: #00AAA0;
+  background: var(--color-background-sidebar);
 }
 
 
@@ -84,7 +85,8 @@ a:hover, a:focus {
   width: 20px;
   height: 20px;
   transform: rotate(45deg);
-  background: #FFFFFF;
+  background: var(--color-background);
+  transition: background .3s;
 }
 
 #Sidebar > ul > li:before {
@@ -103,11 +105,11 @@ a:hover, a:focus {
 #Sidebar > ul > li > a > svg {
   height: 30px;
   width: 30px;
-  fill: #00726b;
+  fill: var(--color-fill-sidebar-svg);
 }
 #Sidebar > ul > li > a > span {
   display: block;
-  color: #00726b;
+  color: var(--color-fill-sidebar-svg);
   overflow-wrap: break-word;
 }
 
@@ -146,7 +148,7 @@ a:hover, a:focus {
 #Content > div > h1 {
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid var(--color-border-li);
   font-size: 22px;
   font-weight: normal;
 }
@@ -181,7 +183,7 @@ a:hover, a:focus {
 
 .optionList:not(:last-child) {
   list-style: none;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid var(--color-border-li);
   margin-bottom: 20px;
 }
 
@@ -217,12 +219,12 @@ a:hover, a:focus {
 .info {
   transition: color 0.3s;
   font-size: 14px;
-  color: #BBBBBB;
+  color: var(--color-text-info);
 }
 
 .optionList > li:hover > * > .info {
   transition: color 0.3s;
-  color: #666666;
+  color: var(--color-text);
 }
 
 /**
@@ -237,9 +239,9 @@ a:hover, a:focus {
   padding: 8px 0 6px 0;
   text-align: center;
   width: 45px;
-  background: #FBFBFB;
+  background: var(--color-background-form_Elements);
   border-radius: 3px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid var(--color-border-form_Elements);
   transition: background 0.5s;
   cursor: pointer;
 }
@@ -254,8 +256,8 @@ a:hover, a:focus {
 
 .toggleButton:checked + label {
   transition: background 0.5s;
-  background:#00AAA0;
-  border-color: #00AAA0;
+  background:var(--color-background-sidebar);
+  border-color: var(--color-background-sidebar);
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -264,7 +266,7 @@ a:hover, a:focus {
   color: #EAEAEA;
   border-color: #EAEAEA;
   transition: color 0.3s;
-  background: #FBFBFB;
+  background: var(--color-background-form_Elements);
   cursor: not-allowed;
 }
 
@@ -276,8 +278,8 @@ a:hover, a:focus {
   border-radius: 2px;
   padding: 5px;
   width: 130px;
-  background: #FBFBFB;
-  border: 1px solid #DDDDDD;
+  background: var(--color-background-form_Elements);
+  border: 1px solid var(--color-border-form_Elements);
   text-align: center;
   transition: color 0.3s;
   -moz-appearance: textfield;
@@ -314,9 +316,9 @@ a:hover, a:focus {
   width: 47px;
   padding: 5px;
   text-align: center;
-  background: #FBFBFB;
+  background: var(--color-background-form_Elements);
   border-radius: 3px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid var(--color-border-form_Elements);
   transition: background 0.5s;
   cursor: pointer;
 }
@@ -328,14 +330,14 @@ a:hover, a:focus {
 .selectField {
   width: 110px;
   padding: 4px 25px 4px 5px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid var(--color-border-form_Elements);
   box-sizing: content-box;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   border-radius: 2px;
-  background-color: #FBFBFB;
-  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 345 210" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline fill="none" stroke="%23666666" stroke-width="75" stroke-linecap="round" stroke-linejoin="round" points="38,38 172,172 307,38 "/></svg>');
+  background-color: var(--color-background-form_Elements);
+  background-image: var(--color-select-arrow);
   background-position: right 7px center;
   background-repeat: no-repeat;
   text-overflow: ellipsis;
@@ -349,9 +351,9 @@ a:hover, a:focus {
   padding: 8px 6px 6px 6px;
   text-align: center;
   min-width: 142px;
-  background: #FBFBFB;
+  background: var(--color-background-form_Elements);
   border-radius: 3px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid var(--color-border-form_Elements);
   cursor: pointer;
 }
 
@@ -360,7 +362,7 @@ a:hover, a:focus {
 }
 
 .button:hover {
-  background: #EAEAEA;
+  background: var(--color-hover-button);
 }
 
 ::-moz-focus-inner {
@@ -377,11 +379,11 @@ a:hover, a:focus {
 
 .collapseButton + label {
   cursor: pointer;
-  color: #00AAA0;
+  color: var(--color-highlighted_text);
 }
 
 .collapseButton + label:after {
-  content: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 345 210" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline fill="none" stroke="%2300AAA0" stroke-width="75" stroke-linecap="round" stroke-linejoin="round" points="38,38 172,172 307,38 "/></svg>');;
+  content: var(--color-advanced_settings-arrow);
   display: inline-block;
   margin-left: 5px;
   transition: 0.3s;
@@ -405,8 +407,8 @@ a:hover, a:focus {
   display: flex;
   flex-flow: row nowrap;
   border-radius: 2px;
-  background: #FBFBFB;
-  border: 1px solid #DDDDDD;
+  background: var(--color-background-form_Elements);
+  border: 1px solid var(--color-border-form_Elements);
   transition: color 0.3s;
 }
 
@@ -414,7 +416,7 @@ a:hover, a:focus {
   font-family: "firefox-gesture-arrows";
   letter-spacing: 5px;
   width: 130px;
-  border-right: 1px solid #DDDDDD;
+  border-right: 1px solid var(--color-border-form_Elements);
   padding: 6px 5px;
   text-align: center;
   background: none;
@@ -422,7 +424,7 @@ a:hover, a:focus {
 }
 
 .gestureInput > input:not(:placeholder-shown) {
-  background: #00AAA0;
+  background: var(--color-background-sidebar);
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -467,7 +469,7 @@ a:hover, a:focus {
 }
 
 u {
-  color: #00AAA0;
+  color: var(--color-highlighted_text);
 }
 
 hr {

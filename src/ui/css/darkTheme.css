@@ -1,0 +1,14 @@
+:root {
+  --color-background : #1E1E1E;
+  --color-text: #FBFBFB;
+  --color-text-info: #666666;
+  --color-select-arrow: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 345 210" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline fill="none" stroke="%23FBFBFB" stroke-width="75" stroke-linecap="round" stroke-linejoin="round" points="38,38 172,172 307,38 "/></svg>');
+  --color-advanced_settings-arrow: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 345 210" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline fill="none" stroke="%2300726B" stroke-width="75" stroke-linecap="round" stroke-linejoin="round" points="38,38 172,172 307,38 "/></svg>');
+  --color-background-form_Elements: #2e2e2e;
+  --color-border-form_Elements: #3e3e3e;
+  --color-background-button-hover: #0e0e0e;
+  --color-fill-sidebar-svg: #2e2e2e;
+  --color-background-sidebar: #00726b;
+  --color-border-li: #666666;
+  --color-highlighted_text: #00AAA0;
+}

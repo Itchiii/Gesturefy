@@ -128,6 +128,13 @@ function main () {
   let restoreButton = document.getElementById("restoreButton");
       restoreButton.onchange = onRestoreButton;
 
+  //darkMode button
+  let darkModeButton = document.getElementById('darkModeButton');
+      darkModeButton.onclick = darkMode;
+  if (Config.Settings.General.darkMode) {
+    darkMode();
+  }
+
   /**
    * on tab close or url change or refresh save data to storage
    * also propagate the new settings to all tabs
@@ -451,4 +458,14 @@ function decodeHtml(html) {
   var txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
+}
+
+/**
+ * change dark mode
+ **/
+function darkMode() {
+  let darkModeButton = document.getElementById('darkModeButton');
+      darkModeButton.classList.toggle("darkTheme");
+  let theme = darkModeButton.classList.contains("darkTheme") ? "dark" : "light";
+  document.getElementById('themeStylesheet').href=`../css/${theme}Theme.css`;
 }

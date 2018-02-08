@@ -130,7 +130,8 @@
       "wheelDown": "Next"
     },
     "General": {
-      "updateNotification": true
+      "updateNotification": true,
+      "darkMode": false
     }
   }
 }
